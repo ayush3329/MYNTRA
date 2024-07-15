@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Document</title>
+
+    <style>
+        .containers {
+            position: relative;
+        }
+        
+        .containers img {
+            display: block;
+        }
+        
+        .buttons {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: row;
+            gap: 10px;
+            /* Adjust the gap between buttons */
+        }
+        
+        .containers:hover .buttons {
+            display: flex;
+        }
+        
+        .button {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        
+        .save-button {
+            background-color: #e84f7f;
+            color: white;
+        }
+        
+        .upload-button {
+            background-color: white;
+            color: black;
+            font-size: 1.25rem;
+        }
+        
+        .more-button {
+            background-color: white;
+            color: black;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <header>
+        <nav class="z-50 bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 top-0 fixed border-b w-full">
+            <div class="grid grid-cols-5 gap-4 mx-auto">
+                <a href="https://flowbite.com" class="flex items-center gap-4">
+                    <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white border-2 border-pink-400 bg-pink-100 px-2 py-1 rounded-lg">Fwd<i
+                            class='bx bxs-chevron-down'></i></span>
+                    <p class="self-center text-center text-lg font-bold whitespace-nowrap dark:text-white text-yellow-600">
+                        Become <br> Insider</i>
+                        <p class="self-center bg-gray-100 p-1 rounded-lg border text-center text-lg font-bold whitespace-nowrap dark:text-white ">
+                            Build
+                            <br> My Fit</i>
+                        </p>
+                </a>
+                <div class="flex items-center col-span-4 gap-4">
+
+                    <form class="w-full mx-auto">
+                        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <img class="w-8 h-8 rounded-full" src="./assets/img/ai_icon.png" alt="">
+                            </div>
+                            <input type="search" id="default-search" class="block w-full px-4 py-3 ps-12 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-100 focus:ring-pink-500 focus:border-pink-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Search" required />
+                            <button type="submit" class="absolute end-10 bottom-2 text-2xl text-pink-400"><i
+                                    class='bx bxs-color'></i></button>
+                            <button type="submit" class="absolute end-2.5 bottom-2 text-2xl"><i
+                                    class='bx bxs-microphone'></i></button>
+                        </div>
+                    </form>
+
+                    <div class="justify-end gap-4 items-center w-full lg:flex lg:w-auto text-gray-900 text-2xl" id="mobile-menu-2">
+                        <i class='bx bxs-bell'></i>
+                        <i class='bx bxs-cart'></i>
+                        <i class='bx bxs-user-circle'></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="mt-28 grid grid-cols-4 gap-4 p-4">
+        <div class="grid grid-cols-3 gap-2 bg-gray-400 border shadow-sm p-4 rounded-lg">
+            <div class="flex flex-col grid-cols-2 justify-center">
+                <p class="text-md">Text For Div</p>
+                <h4 class="text-xl font-semibold">Heading</h4>
+            </div>
+            <i class='bx bxs-chevron-down'></i>
+
+
+
+
+
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+                </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="grid grid-cols-3 gap-2 bg-pink-200 border shadow-sm p-4 rounded-lg">
+            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213646.png" class="hover:animate-bounce" alt="">
+            <div class="flex flex-col grid-cols-2 justify-center">
+                <p class="text-md">Text For Div</p>
+                <h4 class="text-xl font-semibold">Heading</h4>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 bg-violet-300 border shadow-sm p-4 rounded-lg">
+            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213646.png" class="hover:animate-bounce" alt="">
+            <div class="flex flex-col grid-cols-2 justify-center">
+                <p class="text-md">Text For Div</p>
+                <h4 class="text-xl font-semibold">Heading</h4>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 bg-yellow-100 border shadow-sm p-4 rounded-lg">
+            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213646.png" class="hover:animate-bounce" alt="">
+            <div class="flex flex-col grid-cols-2 justify-center">
+                <p class="text-md">Text For Div</p>
+                <h4 class="text-xl font-semibold">Heading</h4>
+            </div>
+        </div>
+    </section>
+
+    <main class="p-4 w-full">
+        <div class="flex flex-wrap gap-4 mx-auto">
+
+
+
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/564x/38/9c/1f/389c1f152563fc4a7c95d4e6f0fcf808.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/736x/bf/63/1d/bf631d577cd3420ecf34849a7e49bd96.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/564x/c8/a6/e7/c8a6e7d3811a7adcc09213a38ad0df55.jpg" alt="" class="w-48 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/564x/88/75/41/88754123ba9a8b2bc63b6c907e04e8a3.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/564x/38/9c/1f/389c1f152563fc4a7c95d4e6f0fcf808.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/736x/bf/63/1d/bf631d577cd3420ecf34849a7e49bd96.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/564x/38/9c/1f/389c1f152563fc4a7c95d4e6f0fcf808.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="containers">
+                <img src="https://i.pinimg.com/736x/bf/63/1d/bf631d577cd3420ecf34849a7e49bd96.jpg" alt="" class="w-72 rounded-lg bg-gray-200 border grow" />
+                <div class="buttons">
+                    <button class="button save-button">Save</button>
+                    <button class="button upload-button">
+                        <i class='bx bx-share'></i>
+                    </button>
+                    <button class="button more-button"><i class='bx bx-download' ></i></button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
