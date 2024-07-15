@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar .left,
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left .fwd {
+  background-color: #ffb6c1; /* Powder pink color */
+  border: 2px solid #ffb6c1; /* Powder pink border */
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.navbar .left .nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navbar .left .nav-item.become-insider,
+.navbar .left .nav-item.build-my-fit {
+  text-align: center;
+}
+
+.navbar .left .nav-item.become-insider {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navbar .left .nav-item.build-my-fit {
+  border: 1px solid #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navbar .center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .center .search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.navbar .center .search-bar .ai-face {
+  position: absolute;
+  left: 10px;
+}
+
+.navbar .center input {
+  padding: 5px 5px 5px 40px; /* Adjust padding to accommodate the AI face icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.navbar .center input::placeholder {
+  color: #ccc;
+}
+
+.navbar .center .search-features img {
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+.navbar .center .search-features .mic {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navbar .right img {
+  margin: 0 10px;
+}
+
+.dropdown-button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.dropdown ul li {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
